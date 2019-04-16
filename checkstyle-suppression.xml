@@ -10,5 +10,6 @@
     <suppress files="[\\/]dev.canm[\\/].*\.java$" checks="AvoidInlineConditionals"/>
     <suppress files="[\\/]dev.canm[\\/].*\.java$" checks="HideUtilityClassConstructor"/>
     <suppress files="[\\/]dev.canm.*[\\/].*Configuration.java$" checks="DesignForExtension"/>
+    <suppress files="[\\/]dev.canm.*[\\/].*Config.java$" checks="DesignForExtension"/>
     <suppress files="[\\/]dev.canm.*[\\/].*Controller.java$" checks="DesignForExtension"/>
 </suppressions>

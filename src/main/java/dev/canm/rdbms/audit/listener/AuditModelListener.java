@@ -41,7 +41,7 @@ public class AuditModelListener {
      * @param auditModel Model
      */
     @PreUpdate
-    public void auditUpdate(final AuditModel auditModel) {
+    public final void auditUpdate(final AuditModel auditModel) {
 
         String principal = getPrincipal(authentication);
         if (!auditModel.isDeleted()) {
@@ -56,11 +56,11 @@ public class AuditModelListener {
     /**
      * Gets the principal from {@link Authentication} object, otherwise uses 'NO_PRINCIPAL' key.
      *
-     * @param authentication Authentication for principal
+     * @param auth Authentication for principal
      * @return Principal
      */
-    private String getPrincipal(Authentication authentication) {
-        return Optional.ofNullable(authentication)
+    private String getPrincipal(final Authentication auth) {
+        return Optional.ofNullable(auth)
             .map(Authentication::getPrincipal)
             .map(String::valueOf)
             .orElse(NO_PRINCIPAL);

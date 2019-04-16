@@ -1,6 +1,5 @@
 package dev.canm.rdbms.model;
 
-import com.sun.tools.internal.xjc.model.Model;
 import dev.canm.rdbms.audit.model.AuditModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
