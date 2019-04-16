@@ -1,0 +1,3 @@
+server:
+    # setting port to zero(0) sets the port to a random number
+    port: 0
