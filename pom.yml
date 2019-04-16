@@ -25,6 +25,7 @@ properties: {
 
   # library versions
   version.orika-core: 1.5.4,
+  version.hibernate-envers: 5.4.2.Final,
 
   # testing versions
   version.mockito-all: 1.9.5,
@@ -54,12 +55,17 @@ dependencies:
   # COMPILE dependencies
   # Spring
   - {groupId: org.springframework.boot, artifactId: spring-boot-starter-web}
+  - {groupId: org.springframework.boot, artifactId: spring-boot-starter-security}
   - {groupId: org.springframework.boot, artifactId: spring-boot-starter-data-jpa}
   - {groupId: org.springframework.boot, artifactId: spring-boot-starter-actuator}
   - {groupId: org.springframework.cloud, artifactId: spring-cloud-starter-sleuth}
   - {groupId: org.springframework.cloud, artifactId: spring-cloud-starter-zipkin}
   # Libraries
   - {groupId: ma.glasnost.orika, artifactId: orika-core, version: '${version.orika-core}'}
+  - {groupId: org.hibernate, artifactId: hibernate-envers, version: '${version.hibernate-envers}'}
+  # RUNTIME dependencies
+  - {groupId: org.springframework.boot, artifactId: spring-boot-devtools, scope: runtime}
+  - {groupId: com.h2database, artifactId: h2, scope: runtime}
   # OPTIONAL dependencies
   - {groupId: org.projectlombok, artifactId: lombok, optional: true}
   # TEST dependencies

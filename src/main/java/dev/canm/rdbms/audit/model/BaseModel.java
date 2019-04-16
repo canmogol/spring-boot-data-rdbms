@@ -10,6 +10,7 @@ import javax.persistence.Version;
 
 /**
  * BaseModel definition, mapped super class for other entities.
+ *
  * @param <T>
  */
 @Data
@@ -21,7 +22,7 @@ public abstract class BaseModel<T> implements Model<T> {
 
     @Version
     @Column(name = "BM_VERSION", nullable = false)
-    private Long version = 0L;
+    private T version;
 
     @Column(name = "BM_IS_DELETED")
     private boolean deleted = false;

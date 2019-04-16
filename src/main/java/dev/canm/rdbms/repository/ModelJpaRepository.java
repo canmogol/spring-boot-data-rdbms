@@ -20,7 +20,8 @@ public interface ModelJpaRepository extends JpaRepository<GuitarModel, Long>, Mo
 
     /**
      * Find GuitarModels in the given price range.
-     * @param less highest price
+     *
+     * @param less    highest price
      * @param greater lowest price
      * @return List of GuitarModels
      */
@@ -30,18 +31,19 @@ public interface ModelJpaRepository extends JpaRepository<GuitarModel, Long>, Mo
 
     /**
      * Finds the GuitarModels with the given type names.
+     *
      * @param types List of types
      * @return List of models
      */
     @Lock(LockModeType.PESSIMISTIC_WRITE)
-    List<GuitarModel> findByGuitarModelTypeNameIn(List<String> types);
+    List<GuitarModel> findByModelTypeNameIn(List<String> types);
 
     /**
      * finds GuitarModels between the range and with the type.
      *
      * @param decimal1 lowest price
      * @param decimal2 highest price
-     * @param s wood type
+     * @param s        wood type
      * @return List of models
      */
     @Query(
@@ -59,8 +61,8 @@ public interface ModelJpaRepository extends JpaRepository<GuitarModel, Long>, Mo
      *
      * @param decimal1 lowest price
      * @param decimal2 highest price
-     * @param s wood type
-     * @param page pagination entry
+     * @param s        wood type
+     * @param page     pagination entry
      * @return List of models
      */
     @Query(value = "select m from GuitarModel m where m.price >= :lowest "
@@ -76,7 +78,7 @@ public interface ModelJpaRepository extends JpaRepository<GuitarModel, Long>, Mo
      * Updates the GuitarModel's name with the ID.
      *
      * @param name new name
-     * @param id ID of the GuitarModel
+     * @param id   ID of the GuitarModel
      * @return number of entities updated by the query.
      */
     @Modifying
@@ -89,20 +91,8 @@ public interface ModelJpaRepository extends JpaRepository<GuitarModel, Long>, Mo
      * @param type name of the GuitarModel
      * @return List of models
      */
-    // named query defined in GuitarModel class is "GuitarModel.findAllGuitarModelsByType"
-    // the first part "GuitarModel." is the generic type of this repository
-    // the second part ".findAllGuitarModelsByType" is the part of the method after the "named" prefix.
-    List<GuitarModel> namedfindAllGuitarModelsByType(@Param("name") String type);
-
-
-    /**
-     * Finds all the GuitarModels with the given name.
-     * @param type name of the GuitarModel
-     * @return List of models
-     */
     // otherwise you can set the named query to the Query annotation as follows.
     @Query(name = "GuitarModel.findAllGuitarModelsByType")
     List<GuitarModel> findTypesUsingNamedQuery(@Param("name") String type);
-
 
 }

@@ -17,6 +17,7 @@ public class ModelTypeRepository {
 
     /**
      * Creates ModelType.
+     *
      * @param mt ModelType
      * @return persisted ModelType
      */
@@ -28,6 +29,7 @@ public class ModelTypeRepository {
 
     /**
      * Updates ModelType.
+     *
      * @param mt ModelType
      * @return updated model type.
      */
@@ -39,6 +41,7 @@ public class ModelTypeRepository {
 
     /**
      * Deletes given model type.
+     *
      * @param mt ModelType
      */
     public final void delete(final ModelType mt) {
@@ -48,6 +51,7 @@ public class ModelTypeRepository {
 
     /**
      * Finds the model type by ID.
+     *
      * @param id ModelType's ID
      * @return found ModelType or null
      */

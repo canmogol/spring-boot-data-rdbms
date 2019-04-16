@@ -23,6 +23,7 @@ public class ManufacturerRepository {
 
     /**
      * Creates a Manufacturer.
+     *
      * @param man Manufacturer
      * @return created Manufacturer
      */
@@ -32,6 +33,7 @@ public class ManufacturerRepository {
 
     /**
      * Updates the given Manufacturer.
+     *
      * @param man Manufacturer
      * @return updated Manufacturer
      */
@@ -41,6 +43,7 @@ public class ManufacturerRepository {
 
     /**
      * Deletes the given Manufacturer.
+     *
      * @param man Manufacturer
      */
     public final void delete(final Manufacturer man) {
@@ -50,6 +53,7 @@ public class ManufacturerRepository {
 
     /**
      * Finds the Manufacturer by ID.
+     *
      * @param id Manufacturer's ID
      * @return Manufacturer
      */
@@ -60,6 +64,7 @@ public class ManufacturerRepository {
 
     /**
      * Custom finder.
+     *
      * @param date founded before date.
      * @return List of Manufacturers
      */
@@ -69,6 +74,7 @@ public class ManufacturerRepository {
 
     /**
      * Custom finder.
+     *
      * @param name Manufacturer name
      * @return Manufacturer
      */
@@ -80,6 +86,7 @@ public class ManufacturerRepository {
 
     /**
      * Native Query finder.
+     *
      * @param modelType model type
      * @return List of Manufacturers
      */

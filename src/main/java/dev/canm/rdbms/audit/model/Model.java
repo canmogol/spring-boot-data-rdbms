@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Base class for entities.
+ *
  * @param <T>
  */
 public interface Model<T> extends Serializable {
@@ -17,6 +18,7 @@ public interface Model<T> extends Serializable {
 
     /**
      * Sets ID.
+     *
      * @param t ID of the entity
      */
     void setId(T t);

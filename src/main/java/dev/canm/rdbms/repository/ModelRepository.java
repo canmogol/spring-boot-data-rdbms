@@ -29,6 +29,7 @@ public class ModelRepository {
 
     /**
      * Create a GuitarModel.
+     *
      * @param mod Guitar model
      * @return saved GuitarModel
      */
@@ -70,7 +71,7 @@ public class ModelRepository {
     /**
      * Custom finder, finds the GuitarModels in the given price range.
      *
-     * @param lowest lowest price
+     * @param lowest  lowest price
      * @param highest highest price
      * @return List of GuitarModels within the given price range.
      */
@@ -84,9 +85,9 @@ public class ModelRepository {
     /**
      * Custom finder, finds the model in the price range and type.
      *
-     * @param lowest price
+     * @param lowest  price
      * @param highest price
-     * @param wood type
+     * @param wood    type
      * @return Page of GuitarModels
      */
     public final Page<GuitarModel> getModelsByPriceRangeAndWoodType(

@@ -13,6 +13,7 @@ public interface ManufacturerJpaRepository extends JpaRepository<Manufacturer, L
 
     /**
      * Finds Manufacturers found before given date.
+     *
      * @param date found date.
      * @return List of Manufacturers
      */
@@ -20,6 +21,7 @@ public interface ManufacturerJpaRepository extends JpaRepository<Manufacturer, L
 
     /**
      * Finds the first Manufacturers found before given date.
+     *
      * @param date found date
      * @return List of Manufacturers
      */
@@ -27,6 +29,7 @@ public interface ManufacturerJpaRepository extends JpaRepository<Manufacturer, L
 
     /**
      * Finds top 5 Manufacturers found before given date.
+     *
      * @param date found date
      * @return List of Manufacturers
      */
@@ -34,6 +37,7 @@ public interface ManufacturerJpaRepository extends JpaRepository<Manufacturer, L
 
     /**
      * Finds distinct Manufacturers by the name.
+     *
      * @param name name
      * @return Manufacturers
      */
@@ -41,6 +45,7 @@ public interface ManufacturerJpaRepository extends JpaRepository<Manufacturer, L
 
     /**
      * Finds all the acoustic guitar manufacturers by name.
+     *
      * @param name Name
      * @return List of Manufacturers
      */
