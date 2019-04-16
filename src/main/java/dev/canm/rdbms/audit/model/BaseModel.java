@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
+import java.io.Serializable;
 
 /**
  * BaseModel definition, mapped super class for other entities.
@@ -16,7 +17,7 @@ import javax.persistence.Version;
 @Data
 @MappedSuperclass
 @EntityListeners({BaseModelListener.class})
-public abstract class BaseModel<T> implements Model<T> {
+public abstract class BaseModel<T extends Serializable> implements Model<T> {
 
     private static final long serialVersionUID = -5078006836869173887L;
 

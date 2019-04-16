@@ -7,7 +7,7 @@ import java.io.Serializable;
  *
  * @param <T>
  */
-public interface Model<T> extends Serializable {
+public interface Model<T extends Serializable> extends Serializable {
 
     /**
      * Gets ID.

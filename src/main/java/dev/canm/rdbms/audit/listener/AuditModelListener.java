@@ -28,7 +28,7 @@ public class AuditModelListener {
      * @param auditModel Model
      */
     @PrePersist
-    public final void auditCreation(final AuditModel auditModel) {
+    public final void auditCreation(final AuditModel<?> auditModel) {
 
         String createdBy = getPrincipal(authentication);
         auditModel.setCreatedBy(createdBy);
@@ -41,7 +41,7 @@ public class AuditModelListener {
      * @param auditModel Model
      */
     @PreUpdate
-    public final void auditUpdate(final AuditModel auditModel) {
+    public final void auditUpdate(final AuditModel<?> auditModel) {
 
         String principal = getPrincipal(authentication);
         if (!auditModel.isDeleted()) {
