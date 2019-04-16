@@ -1,6 +1,6 @@
-# Spring Boot Archetype
+# Spring Boot RDBMS 
 
-Spring boot archetype project.
+Spring boot RDBMS example application, contains examples for relational entities, multiple Repository implementations and Auditing with Hibernate Envers.
 
 ### Built With
 
@@ -10,6 +10,7 @@ Spring boot archetype project.
 - [Lombok](https://projectlombok.org/) 
 - [Maven](https://maven.apache.org/) 
 - [Travis](https://travis-ci.org/)  [![Build Status](https://travis-ci.org/canmogol/spring-boot-archetype.svg?branch=master)](https://travis-ci.org/canmogol/spring-boot-archetype)
+- [SonarQube](https://sonarcloud.io/dashboard?id=dev.canm%3Aspring-boot-data-rdbms) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=dev.canm%3Aspring-boot-data-rdbms&metric=alert_status)](https://sonarcloud.io/dashboard?id=dev.canm%3Aspring-boot-data-rdbms)
 - [Java8](https://openjdk.java.net/install/) 
 
 ### Getting Started
